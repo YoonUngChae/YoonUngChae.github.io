@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
 body {
   margin: 0;
   padding: 0.1px;
@@ -58,6 +60,7 @@ body {
 .shoppinginfo_layout a {
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #989898;
   text-decoration: none;
 }
@@ -65,6 +68,7 @@ body {
 .shoppinginfo_layout strong {
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #666;
 }
 
@@ -76,6 +80,7 @@ body {
   margin-left: 15px;
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #666;
   display: flex;
   align-items: center;
@@ -91,6 +96,7 @@ body {
   cursor: pointer;
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #666;
   margin-left: 15px;
 }
@@ -112,6 +118,7 @@ body {
   list-style: none;
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #666;
 }
 
@@ -155,6 +162,8 @@ body {
   margin: 0 auto;
   display: flex;
   padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .main_menu>ul>li {
@@ -165,6 +174,7 @@ body {
   align-items: center;
   font-size: 15px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #1a1a1a;
   display: inline-grid;
   position: relative;
@@ -222,12 +232,114 @@ body {
   list-style: none;
 }
 
+.mobile_wrap img {
+  cursor: pointer;
+}
+
 .mian_banner {
   overflow: hidden;
 }
 
+.aside {
+  width: 80%;
+  z-index: 1001;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  background-color: #fff;
+  transition: all 1s;  
+  left: -945px;
+}
+
+.aside_logo>img{
+  width: 30%;
+}
+
+.aside_menu_top{
+  padding: 50px 00px 10px 0px;
+}
+
+.aside_menu_top>a{
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-right: 10px;
+  color: #000000;
+}
+
+.aside_menu{
+  padding: 60px 30px;
+}
+
+.side_menu_category{
+  padding: 30px 0px;
+}
+
+.side_add_category{
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side_add_category>li{
+  display: block;
+  width: 80px;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #000;
+  cursor: pointer;
+}
+
+.aside_menu_bot{
+  padding: 23px 50px 25px 0;
+  border-top: 1px solid #ebebeb;
+}
+
+.side_title{
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 30px 0 15px;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #51806C;
+  cursor: pointer;
+}
+
+.btn_close{
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  top: -720px;
+  right: -800px;
+  overflow: hidden;
+}
+
+.btn_close>img{
+  width: 24px;
+  height: 24px;
+}
+
+.aside_on{
+  left: 0px;
+}
+
+.aside_close{
+  left: -945px;
+}
+
 .banner_con {
-  display: flex;  
+  display: flex;
   transition: all 1s;
 }
 
@@ -328,6 +440,7 @@ body {
   margin: 150px auto 100px;
   font-size: 30px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
 }
 
@@ -352,16 +465,18 @@ body {
 .new_product_top p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .new_product_top strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.new_product_top img {
+.new_product_top>div>img {
   cursor: pointer;
 }
 
@@ -379,6 +494,7 @@ body {
 .btn_see {
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
   background-color: #fff;
   border: 1px solid #B3B3B3;
@@ -405,16 +521,18 @@ body {
 .new_product_bot p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .new_product_bot strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.new_product_bot img {
+.new_product_bot>div>img {
   cursor: pointer;
 }
 
@@ -440,6 +558,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #51806c;
   cursor: pointer;
 }
@@ -448,12 +567,14 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
 .diving {
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
@@ -468,6 +589,7 @@ body {
   display: flex;
   transition: all 1s;
   height: 330px;
+  user-select: none;
 }
 
 .lantern_product>div {
@@ -478,16 +600,18 @@ body {
 .lantern_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .lantern_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.lantern_product img {
+.lantern_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -511,16 +635,18 @@ body {
 .diving_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .diving_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.diving_product img {
+.diving_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -537,6 +663,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #51806c;
   cursor: pointer;
 }
@@ -545,12 +672,14 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
 .winter_boots {
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
@@ -575,16 +704,18 @@ body {
 .military_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .military_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.military_product img {
+.military_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -603,16 +734,18 @@ body {
 .hiking_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .hiking_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.hiking_product img {
+.hiking_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -630,16 +763,18 @@ body {
 .winter_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .winter_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.winter_product img {
+.winter_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -656,6 +791,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #51806c;
   cursor: pointer;
 }
@@ -664,12 +800,14 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
 .camping_knife {
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
@@ -694,16 +832,18 @@ body {
 .multitool_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .multitool_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.multitool_product img {
+.multitool_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -721,16 +861,18 @@ body {
 .axe_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .axe_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.axe_product img {
+.axe_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -748,16 +890,18 @@ body {
 .knife_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .knife_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.knife_product img {
+.knife_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -774,6 +918,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #51806c;
   cursor: pointer;
 }
@@ -782,6 +927,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
@@ -805,16 +951,18 @@ body {
 .helikontex_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .helikontex_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.helikontex_product img {
+.helikontex_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -832,16 +980,18 @@ body {
 .winter_wardrobe_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .winter_wardrobe_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.winter_wardrobe_product img {
+.winter_wardrobe_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -858,6 +1008,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #51806c;
   cursor: pointer;
 }
@@ -866,6 +1017,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
@@ -873,6 +1025,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer;
 }
 
@@ -897,16 +1050,18 @@ body {
 .chair_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .chair_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.chair_product img {
+.chair_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -924,16 +1079,18 @@ body {
 .pouch_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .pouch_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.pouch_product img {
+.pouch_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -951,16 +1108,18 @@ body {
 .goggles_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .goggles_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.goggles_product img {
+.goggles_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -977,6 +1136,7 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #51806c;
   cursor: pointer;
 }
@@ -1001,16 +1161,18 @@ body {
 .sleepingbag_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .sleepingbag_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.sleepingbag_product img {
+.sleepingbag_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -1018,11 +1180,13 @@ body {
 .coupon_banner {
   width: 100%;
   margin-top: 100px;
+  cursor: pointer;
 }
 
 .mobile_coupon_banner {
   width: 100%;
   margin-top: 100px;
+  cursor: pointer;
 }
 
 .hot_wrap {
@@ -1045,16 +1209,18 @@ body {
 .hot_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .hot_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.hot_product img {
+.hot_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -1072,23 +1238,25 @@ body {
 }
 
 .mobile_hot_product>div {
-  width: 190px;
+  width: 210px;
   padding: 0px 10px 0px 0px;
 }
 
 .mobile_hot_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .mobile_hot_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.mobile_hot_product img {
+.mobile_hot_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -1114,16 +1282,18 @@ body {
 .pelican_product_one p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .pelican_product_one strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.pelican_product_one img {
+.pelican_product_one>div>img {
   cursor: pointer;
 }
 
@@ -1142,16 +1312,18 @@ body {
 .pelican_product_two p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .pelican_product_two strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.pelican_product_two img {
+.pelican_product_two>div>img {
   cursor: pointer;
 }
 
@@ -1165,6 +1337,7 @@ body {
 .btn_see_2 {
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
   background-color: #fff;
   border: 1px solid #B3B3B3;
@@ -1196,16 +1369,18 @@ body {
 .pelican_product_three p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .pelican_product_three strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.pelican_product_three img {
+.pelican_product_three>div>img {
   cursor: pointer;
 }
 
@@ -1226,16 +1401,18 @@ body {
 .pelican_product_four p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .pelican_product_four strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.pelican_product_four img {
+.pelican_product_four>div>img {
   cursor: pointer;
 }
 
@@ -1248,7 +1425,7 @@ body {
   overflow: hidden;
   margin: auto;
   max-width: 1200px;
-  height: 300px;
+  height: 310px;
 }
 
 .arrowbon_product {
@@ -1264,16 +1441,18 @@ body {
 .arrowbon_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .arrowbont_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.arrowbon_product img {
+.arrowbon_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -1282,7 +1461,7 @@ body {
   overflow: hidden;
   margin: auto;
   max-width: 1200px;
-  height: 300px;
+  height: 310px;
 }
 
 .mobile_arrowbon_product {
@@ -1298,16 +1477,18 @@ body {
 .mobile_arrowbon_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .mobile_arrowbont_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.mobile_arrowbon_product img {
+.mobile_arrowbon_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -1330,16 +1511,18 @@ body {
 .element_product p {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #212121;
 }
 
 .element_product strong {
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #3F3F3F;
 }
 
-.element_product img {
+.element_product>div>img {
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -1348,6 +1531,11 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 100px auto 0px;
+  cursor: pointer;
+}
+
+.mobile_review_banner{
+  cursor: pointer;
 }
 
 .photo_review {
@@ -1395,6 +1583,7 @@ body {
   max-width: 500px;
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #1a1a1a;
   line-height: 24px;
 }
@@ -1406,6 +1595,7 @@ body {
 .info_title {
   font-size: 14px;
   font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
   margin: 0px 0px 10px 0px;
   color: #000;
 }
@@ -1416,6 +1606,7 @@ body {
 
 .info_list strong {
   font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 13px;
   color: #000;
 }
@@ -1423,6 +1614,7 @@ body {
 .info_list span {
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
   margin-left: 10px;
 }
@@ -1437,6 +1629,7 @@ body {
   margin-left: 35px;
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
 }
 
@@ -1452,6 +1645,7 @@ body {
 .bt_title {
   font-size: 14px;
   font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
   margin-bottom: 10px;
   line-height: 24px;
@@ -1467,6 +1661,7 @@ body {
 
 .list strong {
   font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 13px;
   color: #000;
 }
@@ -1474,6 +1669,7 @@ body {
 .list span {
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
 }
 
@@ -1483,6 +1679,7 @@ body {
 
 .bt_title_sub {
   font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 13px;
   color: #000;
 }
@@ -1501,6 +1698,7 @@ body {
 .copyright {
   font-size: 13px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #000;
   line-height: 24px;
   text-align: left;
@@ -1517,6 +1715,7 @@ body {
 .escrow>span {
   font-size: 12px;
   font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #b3b3b3;
   line-height: 1.6;
   width: 350px;
@@ -1549,6 +1748,7 @@ body {
   color: #000;
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
   border: 1px solid #B3B3B3;
   justify-content: space-around;
   display: flex;
@@ -1609,7 +1809,7 @@ body {
 @media screen and (min-width : 1201px) {
   .mian_banner {
     width: 200%;
-  } 
+  }
 
   .mobile_banner_con {
     display: none;
@@ -1644,6 +1844,9 @@ body {
   }
 
   .mobile_review_banner {
+    display: none;
+  }
+  .aside{
     display: none;
   }
 }
@@ -1686,6 +1889,11 @@ body {
     padding-top: 23px;
   }
 
+  .aside{
+    display: block;
+    width: 80%;    
+  }
+
   .section_img {
     display: none;
   }
@@ -1698,54 +1906,50 @@ body {
 
   .mobile_section_img>img {
     margin: auto;
+    width: 25%;
+    height: 25%;
   }
 
   .new_product_warp {
     display: block;
+    margin: 0px auto;
     width: 100%;
-    max-width: 720px;
   }
 
   .new_product_top {
-    display: block;
-    margin: auto;
+    display: flex;
+    margin: 0px auto;
     width: 100%;
-    max-width: 720px;
   }
 
   .new_product_top>div {
-    max-width: 720px;
-    width: 49%;
-    padding: 0px;
-    display: inline-block;
+    margin: 0px auto;
+    width: 100%;
   }
 
   .new_product_top>div>img {
-    max-width: 360px;
+    margin: 0px auto;
     width: 100%;
-    padding: 0px;
-    display: inline-block;
   }
 
   .new_product_bot {
-    display: block;
-    margin: auto;
+    display: flex;
+    margin: 0px auto;
     width: 100%;
-    max-width: 720px;
   }
 
   .new_product_bot>div {
-    max-width: 720px;
-    width: 49%;
-    padding: 0px;
-    display: inline-block;
+    margin: 0px auto;
+    width: 100%;
   }
 
   .new_product_bot>div>img {
-    max-width: 360px;
+    margin: 0px auto;
     width: 100%;
-    padding: 0px;
-    display: inline-block;
+  }
+
+  .see_more_2{
+    display: none;
   }
 
   .push_wrap {
@@ -1835,17 +2039,22 @@ body {
 
   .mobile_coupon_banner {
     display: block;
+    width: 100%;
+  }
+
+  .mobile_coupon_banner>img{
+    width: 100%;
   }
 
   .hot_wrap {
     display: none;
   }
 
-  .mobile_hot_product {
-    max-width: 720px;
+  .mobile_hot_wrap{
     width: 100%;
-    margin: auto;
+    margin: auto 20px;
     display: flex;
+    height: 360px;
   }
 
   .arrowbon_wrap {
@@ -1853,42 +2062,40 @@ body {
   }
 
   .mobile_arrowbon_wrap {
-    max-width: 720px;
     width: 100%;
-    margin: auto;
+    margin: auto 20px;
     display: flex;
+  }  
+
+  .element_wrap{
+    width: 100%;
   }
 
   .pelican_product_warp {
     display: block;
     width: 100%;
-    max-width: 720px;
   }
 
   .pelican_product_top {
     display: block;
     margin: auto;
     width: 100%;
-    max-width: 720px;
   }
 
   .pelican_product_one {
     display: block;
     margin: auto;
-    width: 100%;
-    max-width: 720px;
+    width: 90%;
   }
 
   .pelican_product_one>div {
-    max-width: 720px;
-    width: 49%;
+    width: 22%;
     padding: 0px;
     display: inline-grid;
     justify-content: center;
   }
 
   .pelican_product_one>div>img {
-    max-width: 360px;
     width: 100%;
     padding: 0px;
     display: flex;
@@ -1896,21 +2103,18 @@ body {
 
   .pelican_product_two {
     display: block;
-    margin: auto;
-    width: 100%;
-    max-width: 720px;
+    margin: 20px auto;
+    width: 90%;
   }
 
   .pelican_product_two>div {
-    max-width: 720px;
-    width: 49%;
+    width: 22%;
     padding: 0px;
     display: inline-grid;
     justify-content: center;
   }
 
   .pelican_product_two>div>img {
-    max-width: 360px;
     width: 100%;
     padding: 0px;
     display: flex;
@@ -1920,30 +2124,33 @@ body {
     display: none;
   }
 
+  .down_2 {
+    height: 675px;
+    transition: all 0.3s;
+  }
+
   .pelican_product_bot {
-    display: inline-grid;
+    display: block;
     margin: auto;
     width: 100%;
-    max-width: 720px;
+    height: 100%;
   }
 
   .pelican_product_three {
-    display: inline-table;
+    display: block;
     margin: auto;
-    width: 100%;
-    max-width: 720px;
+    width: 90%;
+    height: 100%;
   }
 
   .pelican_product_three>div {
-    max-width: 720px;
-    width: 49%;
+    width: 22%;
     padding: 0px;
     display: inline-grid;
     justify-content: center;
   }
 
   .pelican_product_three>div>img {
-    max-width: 360px;
     width: 100%;
     padding: 0px;
     display: flex;
@@ -1952,20 +2159,18 @@ body {
   .pelican_product_four {
     display: block;
     margin: auto;
-    width: 100%;
-    max-width: 720px;
+    width: 90%;
+    height: 100%;
   }
 
   .pelican_product_four>div {
-    max-width: 720px;
-    width: 49%;
+    width: 22%;
     padding: 0px;
     display: inline-grid;
     justify-content: center;
   }
 
   .pelican_product_four>div>img {
-    max-width: 360px;
     width: 100%;
     padding: 0px;
     display: flex;
@@ -1973,10 +2178,25 @@ body {
 
   .review_banner {
     display: none;
+    width: 100%;
   }
 
-  .review_warp {
-    overflow-x: scroll;
+  .mobile_review_banner>img{
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .photo_review{
+    width: 100%;
+    margin: auto;
+  }
+
+  .review_warp{
+    width: 90%;
+  }
+
+  .review_warp>img{
+    width: 22%;
   }
 
   .footer_contain {
@@ -2086,6 +2306,7 @@ body {
     flex-wrap: wrap;
     font-size: 12px;
     font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
     color: #000;
     line-height: 24px;
     letter-spacing: -0.05em;
@@ -2096,6 +2317,7 @@ body {
   .bank_txt {
     font-size: 12px;
     font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
     color: #000;
     line-height: 24px;
     letter-spacing: -0.05em;

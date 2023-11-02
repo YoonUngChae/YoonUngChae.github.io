@@ -93,7 +93,7 @@
             <!-- 모바일 메뉴 영역 시작 -->
             <div class="mobile_wrap">
                 <nav class="mobile_nav_box">
-                    <li><img src="icon/햄버거바.png" alt=""></li>
+                    <li class="hamburger_bar"><img src="icon/햄버거바.png" alt=""></li>
                     <img src="img/모바일버전쇼핑몰로고.png" alt="">
                     <li><img src="icon/검색.png" alt=""></li>
                 </nav>
@@ -101,6 +101,41 @@
             <!-- 모바일 메뉴 영역 끝 -->
         </header>
         <!-- 헤더 영역 끝 -->
+
+        <div class="aside">            
+            <nav class="aside_menu">
+                <div class="aside_logo">
+                    <img src="img/모바일버전쇼핑몰로고.png" alt="">
+                </div>
+                <div class="aside_menu_top">
+                    <a href="">회원가입</a>
+                    <a href="">로그인</a>
+                    <a href="">주문조회</a>
+                    <a href="">최근본상품</a>
+                </div>
+                <div class="side_main_menu">
+                    <div class="side_menu_category">
+                        <ul class="side_add_category">
+                            <li>전체카테고리</li>
+                            <li>서보드차트</li>
+                            <li>신상품</li>
+                            <li>캠핑</li>
+                            <li>크루링크</li>
+                            <li>빡딜</li>
+                            <li>상품리뷰</li>
+                            <li>공지사항</li>
+                            <li>VIP룸</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="aside_menu_bot">
+                    <div class="side_title">고객센터</div>
+                </div>
+                <div>                    
+                    <button type="button" class="btn_close"><img src="icon/닫기.png" alt=""></button>
+                </div>
+            </nav>
+        </div>
 
         <!-- main_banner 영역시작 -->
         <div class="pc_banner">
@@ -181,10 +216,10 @@
                         <p>해저드4 티타늄 브레이슬렛 포 헤비 워터
                             다이버 블랙</p>
                         <strong>294,000원</strong>
-                        <div class="icon">
+                        <div class="icon">                            
                             <img src="icon/오늘출고(아이콘).png" alt="">
                             <img src="icon/사은품(아이콘).png" alt="">
-                        </div>
+                        </div>                        
                     </div>
                     <div>
                         <img src="img/다이버용시계줄-2.png" alt="">
@@ -1367,7 +1402,7 @@
         <div class="mobile_arrowbon_wrap">
             <div class="mobile_arrowbon_product">
                 <div>
-                    <img src="/mg/애로우본-1.png" alt="">
+                    <img src="img/애로우본-1.png" alt="">
                     <p>애로우본 본 01 메카닉 글러브 그린</p>
                     <strong>22,100원</strong>
                 </div>
@@ -1616,6 +1651,7 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
         <script>
             $('#toparea_state_board').on('click', function () {
                 $('.toparea_state_board_ul').toggleClass('active')
@@ -1626,6 +1662,14 @@
             $('.all_category').on('click', function () {
                 $('.all_category_ul').toggleClass('sub_allcate')
                 $('.all_category_ul').css('z-index', '1')
+            })
+
+            $('.hamburger_bar').on('click', function(){
+                $('.aside').addClass('aside_on')                
+            })
+
+            $('.btn_close').on('click', function(){
+                $('.aside').removeClass('aside_on')
             })
 
             $('#banner_1').css('background-color', 'rgba(255,255,255,0.7)')
@@ -1700,25 +1744,60 @@
                 $('.diving').css('color', '#51806c')
             })
 
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.lantern_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.lantern_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.diving_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.diving_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
+            // 마우스 터치 앤 스크롤
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
 
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.product_wrap_1');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
+            
             $('.military_boots').on('click', function () {
                 $('.military_product').css('display', 'flex')
                 $('.hiking_product').css('display', 'none')
@@ -1744,33 +1823,59 @@
                 $('.winter_boots').css('color', '#51806c')
             })
 
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.military_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.military_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.hiking_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.hiking_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.winter_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.winter_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.product_wrap_2');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
+           
 
             $('.camping_multitool').on('click', function () {
                 $('.multitool_product').css('display', 'flex')
@@ -1797,15 +1902,58 @@
                 $('.camping_knife').css('color', '#51806c')
             })
 
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.multitool_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.multitool_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.product_wrap_3');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
 
             $('.helikontex_wardrobe').on('click', function () {
                 $('.helikontex_product').css('display', 'flex')
@@ -1820,24 +1968,58 @@
                 $('.winter_wardrobe').css('color', '#51806c')
             })
 
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.helikontex_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.helikontex_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.winter_wardrobe_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.winter_wardrobe_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.product_wrap_4');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
 
             $('.camping_chair').on('click', function () {
                 $('.chair_product').css('display', 'flex')
@@ -1864,33 +2046,58 @@
                 $('.goggles').css('color', '#51806c')
             })
 
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.chair_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.chair_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.pouch_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.pouch_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.goggles_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.goggles_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.product_wrap_5');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
 
             $('.winter_sleepingbag').on('click', function () {
                 $('.sleepingbag_product').css('display', 'flex')
@@ -1900,41 +2107,250 @@
                 // $('.camping_pouch').css('color', 'rgb(21,21,21)')
                 // $('.goggles').css('color', 'rgb(21,21,21)')
             })
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.sleepingbag_product').css('transform', 'translateX(-90px)')
-                    지금사진 = 2;
-                } else {
-                    $('.sleepingbag_product').css('transform', 'translateX(0px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
 
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.product_wrap_6');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
             $('.btn_see_2').on('click', function () {
                 $('.pelican_product_bot').addClass('down_2')
                 $('.btn_see_2').css('opacity', '0')
             })
 
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.hot_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.hot_product').css('transform', 'translateX(-385px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
 
-            setInterval(() => {
-                if (지금사진 == 1) {
-                    $('.arrowbon_product').css('transform', 'translateX(0px)')
-                    지금사진 = 2;
-                } else {
-                    $('.arrowbon_product').css('transform', 'translateX(-670px)')
-                    지금사진 = 1;
-                }
-            }, 2000);
+            const scrollableContent = document.querySelector(selector);
 
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.hot_wrap');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
+
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.mobile_hot_wrap');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
+
+            function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = document.querySelector(selector);
+
+            scrollableContent.addEventListener('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offsetLeft;
+                scrollLeft = scrollableContent.scrollLeft;
+            });
+
+            scrollableContent.addEventListener('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.addEventListener('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offsetLeft;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        scrollableContent('.arrowbon_wrap');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
+
+        scrollableContent('.mobile_arrowbon_wrap');
+        function scrollableContent(selector) {
+            let isScrolling = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const scrollableContent = $(selector);
+
+            scrollableContent.on('mousedown', (e) => {
+                isScrolling = true;
+                startX = e.pageX - scrollableContent.offset().left;
+                scrollLeft = scrollableContent.scrollLeft();
+            });
+
+            scrollableContent.on('mouseup', () => {
+                isScrolling = false;
+            });
+
+            scrollableContent.on('mousemove', (e) => {
+                if (!isScrolling) return;
+                e.preventDefault();
+                const x = e.pageX - scrollableContent.offset().left;
+                const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
+                scrollableContent.scrollLeft(scrollLeft - walk);
+            });
+        }
+            
             $('.alarm').on('click', function () {
                 $('.push_box_wrap').css('opacity', '1')
             })
