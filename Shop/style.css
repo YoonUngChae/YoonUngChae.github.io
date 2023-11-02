@@ -402,7 +402,6 @@ body {
 }
 
 .warp {
-  max-width: 1266px;
   width: 90%;
   margin: auto;
 }
@@ -416,7 +415,7 @@ body {
   display: flex;
 }
 
-.section_img>img {
+.section_img img {
   width: 105px;
   height: 142px;
   padding: 0px 10px;
@@ -541,15 +540,21 @@ body {
   transition: all 0.3s;
 }
 
+.product_wrap{
+  width: 90%;
+  margin: auto;
+  max-width: 1266px;
+}
+
 .lantern_warp {
-  width: 100%;
+  width: 90%;
   height: 330px;
-  max-width: 1200px;
   display: flex;
+  margin: auto;
 }
 
 .text_box {
-  width: 190px;
+  width: 19%;
   display: block;
   float: left;
 }
@@ -652,11 +657,10 @@ body {
 }
 
 .shoes_warp {
-  width: 100%;
+  width: 90%;
   height: 330px;
-  max-width: 1200px;
   display: flex;
-  margin-top: 70px;
+  margin: 70px auto 0px;
 }
 
 .military_boots {
@@ -780,11 +784,10 @@ body {
 }
 
 .multitool_warp {
-  width: 100%;
+  width: 90%;
   height: 330px;
-  max-width: 1200px;
   display: flex;
-  margin-top: 70px;
+  margin: 70px auto 0px;
 }
 
 .camping_multitool {
@@ -907,11 +910,10 @@ body {
 }
 
 .wardrobe_warp {
-  width: 100%;
+  width: 90%;
   height: 330px;
-  max-width: 1200px;
   display: flex;
-  margin-top: 70px;
+  margin: 70px auto 0px;
 }
 
 .helikontex_wardrobe {
@@ -997,11 +999,10 @@ body {
 }
 
 .accessory_warp {
-  width: 100%;
+  width: 90%;
   height: 345px;
-  max-width: 1200px;
   display: flex;
-  margin-top: 70px;
+  margin: 70px auto 0px;
 }
 
 .camping_chair {
@@ -1125,11 +1126,10 @@ body {
 }
 
 .sleepingbag_warp {
-  width: 100%;
+  width: 90%;
   height: 330px;
-  max-width: 1200px;
   display: flex;
-  margin-top: 70px;
+  margin: 70px auto 0px;
 }
 
 .winter_sleepingbag {
@@ -1178,9 +1178,10 @@ body {
 }
 
 .coupon_banner {
-  width: 100%;
-  margin-top: 100px;
+  width: 90%;
+  margin: 100px auto;
   cursor: pointer;
+  max-width: 1920px;
 }
 
 .mobile_coupon_banner {
@@ -1262,9 +1263,9 @@ body {
 }
 
 .pelican_product_warp {
-  width: 100%;
-  max-width: 1266px;
+  width: 90%;
   margin: auto;
+  max-width: 1266px;
 }
 
 .pelican_product_one {
@@ -1557,7 +1558,6 @@ body {
 
 .footer_contain {
   width: 100%;
-  max-width: 1920px;
   margin-top: 200px;
   background-color: #f9f9f9;
 }
