@@ -30,12 +30,12 @@
 
                     <!-- toparea_state 영역 시작 -->
                     <div class="toparea_state">
-                        <a>회원가입</a>
-                        <a>로그인</a>
-                        <a>주문조회</a>
-                        <a>최근본상품</a>
+                        <a href="">회원가입</a>
+                        <a href="/Shop/Login/">로그인</a>
+                        <a href="">주문조회</a>
+                        <a href="">최근본상품</a>
                         <div id="toparea_state_board" class="toparea_state_board">
-                            <a>고객센터 <img class="icoArrowBottom" src="icon/화살표아래-1.png" alt=""></a>
+                            <a href="">고객센터 <img class="icoArrowBottom" src="icon/화살표아래-1.png" alt=""></a>
                             <ul class="toparea_state_board_ul">
                                 <li>NOTICE</li>
                                 <li>커뮤니티</li>
@@ -51,7 +51,9 @@
                 <!-- nav_box 영역 시작 -->
                 <div class="nav_box">
                     <div class="logo_box">
-                        <img src="img/쇼핑몰로고.png" alt="">
+                        <a href="/Shop/">
+                            <img src="img/쇼핑몰로고.png" alt="">
+                        </a>
                     </div>
 
                     <nav class="main_menu">
@@ -185,7 +187,7 @@
             <!-- 이미지 영역 시작 -->
             <div class="section_img">
                 <div>
-                    <a href="/trekkingshoes">
+                    <a href="/Shop/trekkingshoes/">
                         <img src="img/트레킹화.png" alt="">
                     </a>
                 </div>
@@ -1009,7 +1011,7 @@
                                 </div>
                             </div>
                             <div>
-                                <img src="/img/침낭-3.png" alt="">
+                                <img src="img/침낭-3.png" alt="">
                                 <p>미니멀웍스 스노우 레오파드</p>
                                 <strong>1,102,000원</strong>
                                 <div class="icon">
@@ -1659,7 +1661,7 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        
         <script>
             $('#toparea_state_board').on('click', function () {
                 $('.toparea_state_board_ul').toggleClass('active')

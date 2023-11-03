@@ -91,14 +91,16 @@ body {
   margin-top: 27px;
 }
 
-.toparea_state_board>a {
-  display: flex;
-  cursor: pointer;
+.toparea_state a {
+  margin-left: 15px;
   font-size: 13px;
   font-weight: 300;
   font-family: 'Noto Sans KR', sans-serif;
   color: #666;
-  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .toparea_state_board_ul {
@@ -152,6 +154,10 @@ body {
   align-items: center;
   flex-shrink: 0;
   height: 80px;
+}
+
+.logo_box>a{
+  text-decoration: none;
 }
 
 .main_menu {
@@ -230,14 +236,6 @@ body {
   display: flex;
   justify-content: space-between;
   list-style: none;
-}
-
-.mobile_wrap img {
-  cursor: pointer;
-}
-
-.mian_banner {
-  overflow: hidden;
 }
 
 .aside {
@@ -336,6 +334,14 @@ body {
 
 .aside_close{
   left: -945px;
+}
+
+.mobile_wrap img {
+  cursor: pointer;
+}
+
+.mian_banner {
+  overflow: hidden;
 }
 
 .banner_con {
@@ -1178,7 +1184,7 @@ body {
 }
 
 .coupon_banner {
-  width: 90%;
+  width: 100%;
   margin: 100px auto;
   cursor: pointer;
   max-width: 1920px;
@@ -1856,22 +1862,6 @@ body {
     width: 100%;
   }
 
-  .banner_con {
-    display: none;
-  }
-
-  .banner_btn {
-    display: none;
-  }
-
-  .mobile_mian_banner {
-    width: 200%;
-  }
-
-  .mobile_banner_btn {
-    display: block;
-  }
-
   .toparea {
     display: none;
   }
@@ -1892,6 +1882,22 @@ body {
   .aside{
     display: block;
     width: 80%;    
+  }
+
+  .banner_con {
+    display: none;
+  }
+
+  .banner_btn {
+    display: none;
+  }
+
+  .mobile_mian_banner {
+    width: 200%;
+  }
+
+  .mobile_banner_btn {
+    display: block;
   }
 
   .section_img {
