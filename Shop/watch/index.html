@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="head">
+        <div class="inner">
+
+            <div class="toparea">
+                <!-- toparea 영역 시작 -->
+
+                <div class="shoppinginfo">
+                    <!-- shoppinginfo_layout 영역 시작 -->
+                    <div class="shoppinginfo_layout">
+                        <ul>
+                            <li><a href="">관심상품<strong>&nbsp;0개</strong></a></li>
+                            <li><a href="">좋아요<strong>&nbsp;0개</strong></a></li>
+                        </ul>
+                    </div>
+                    <!-- shoppinginfo_layout 영역 끝 -->
+                </div>
+
+                <!-- toparea_state 영역 시작 -->
+                <div class="toparea_state">
+                    <a href="">회원가입</a>
+                    <a href="/Shop/Login/">로그인</a>
+                    <a href="">주문조회</a>
+                    <a href="">최근본상품</a>
+                    <div id="toparea_state_board" class="toparea_state_board">
+                        <a>고객센터 <img class="icoArrowBottom" src="img/화살표아래-1.png" alt=""></a>
+                        <ul class="toparea_state_board_ul">
+                            <li>NOTICE</li>
+                            <li>커뮤니티</li>
+                            <li>Q & A</li>
+                            <li>리뷰</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- toparea_state 영역 끝  -->
+            </div>
+            <!-- toparea 영역 끝 -->
+
+            <!-- nav_box 영역 시작 -->
+            <div class="nav_box">
+                <div class="logo_box">
+                    <a href="/Shop/">
+                        <img src="img/쇼핑몰로고.png" alt="">
+                    </a>
+                </div>
+
+                <nav class="main_menu">
+                    <ul>
+                        <li class="all_category">
+                            <a>전체카테고리</a>
+                            <ul class="all_category_ul">
+                                <li>의류<img src="img/화살표오른쪽.png" alt="" style="margin-left: 40px;"></li>
+                                <li>신발<img src="img/화살표오른쪽.png" alt="" style="margin-left: 40px;"></li>
+                                <li>모자<img src="img/화살표오른쪽.png" alt="" style="margin-left: 40px;"></li>
+                                <li>장갑<img src="img/화살표오른쪽.png" alt="" style="margin-left: 40px;"></li>
+                                <li>가방<img src="img/화살표오른쪽.png" alt="" style="margin-left: 40px;"></li>
+                                <li>랜턴<img src="img/화살표오른쪽.png" alt="" style="margin-left: 40px;"></li>
+                                <li>멀티툴<img src="img/화살표오른쪽.png" alt="" style="margin-left: 26px;"></li>
+                                <li>아이웨어<img src="img/화살표오른쪽.png" alt="" style="margin-left: 10px;"></li>
+                                <li>악세사리<img src="img/화살표오른쪽.png" alt="" style="margin-left: 10px;"></li>
+                            </ul>
+                        </li>
+                        <li>서보드차트</li>
+                        <li>신상품</li>
+                        <li>캠핑</li>
+                        <li>크루링크</li>
+                        <li>빡딜</li>
+                        <li>상품리뷰</li>
+                        <li>공지사항</li>
+                        <li>VIP룸</li>
+                    </ul>
+                </nav>
+
+                <div class="icon_box">
+                    <img src="img/마이페이지.png" alt="">
+                    <img src="img/쇼핑백.png" alt="">
+                    <img src="img/검색.png" alt="">
+                </div>
+            </div>
+            <!-- nav_box 영역 끝 -->
+        </div>
+
+        <!-- 모바일 메뉴 영역 시작 -->
+        <div class="mobile_wrap">
+            <nav class="mobile_nav_box">
+                <li class="hamburger_bar"><img src="img/햄버거바.png" alt=""></li>
+                <img src="img/모바일버전쇼핑몰로고.png" alt="">
+                <li><img src="img/검색.png" alt=""></li>
+            </nav>
+        </div>
+        <!-- 모바일 메뉴 영역 끝 -->
+    </header>
+    <!-- 헤더 영역 끝 -->
+
+    <!-- 사이드 메뉴 시작 -->
+    <div class="aside">
+        <nav class="aside_menu">
+            <div class="aside_logo">
+                <img src="img/모바일버전쇼핑몰로고.png" alt="">
+            </div>
+            <div class="aside_menu_top">
+                <a href="">회원가입</a>
+                <a href="">로그인</a>
+                <a href="">주문조회</a>
+                <a href="">최근본상품</a>
+            </div>
+            <div class="side_main_menu">
+                <div class="side_menu_category">
+                    <ul class="side_add_category">
+                        <li>전체카테고리</li>
+                        <li>서보드차트</li>
+                        <li>신상품</li>
+                        <li>캠핑</li>
+                        <li>크루링크</li>
+                        <li>빡딜</li>
+                        <li>상품리뷰</li>
+                        <li>공지사항</li>
+                        <li>VIP룸</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="aside_menu_bot">
+                <div class="side_title">고객센터</div>
+            </div>
+            <div>
+                <button type="button" class="btn_close"><img src="img/닫기.png" alt=""></button>
+            </div>
+        </nav>
+    </div>
+    <!-- 사이드 메뉴 끝 -->
+
+    <!-- 상품 영역 시작 -->
+    <div class="watch_contain">
+        <div class="warp">
+
+            <div class="product_head">
+                <ol>
+                    <li>홈 /</li>
+                    <li>&nbsp;전체카테고리 /</li>
+                    <li>&nbsp;악세사리 /</li>
+                    <li>&nbsp;시계</li>
+                </ol>
+            </div>
+
+            <!-- 피시 영역  -->
+            <div class="watch_warp">
+                <div class="detail_area">
+                    <div class="watch_img">
+                        <div class="main_img">
+                            <div class="img_box">
+                                <img src="img/시계앞면.jpg" alt="" width="100%">
+                            </div>
+                            <div class="img_box">
+                                <img src="img/시계뒷면.jpg" alt="" width="100%">
+                            </div>
+                            <div class="img_box">
+                                <img src="img/시계액정.jpg" alt="" width="100%">
+                            </div>
+                            <div class="img_box">
+                                <img src="img/시계줄.jpg" alt="" width="100%">
+                            </div>
+                        </div>
+                        <div class="watch_listimg">
+                            <div class="img_inner">
+                                <ul>
+                                    <li id="watch_img_1" class="img_list"><img src="img/시계앞면.jpg" alt=""></li>
+                                    <li id="watch_img_2" class="img_list"><img src="img/시계뒷면.jpg" alt=""></li>
+                                    <li id="watch_img_3" class="img_list"><img src="img/시계액정.jpg" alt=""></li>
+                                    <li id="watch_img_4" class="img_list"><img src="img/시계줄.jpg" alt=""></li>
+                                </ul>
+                            </div>
+                            <div style="clear: both;"></div>
+                            <button type="button" class="prev"><i aria-hidden="true" class="icoArrow_left"></i></button>
+                            <button type="button" class="next"><i aria-hidden="true"
+                                    class="icoArrow_right"></i></button>
+                        </div>
+                    </div>
+                    <!-- 상품 정보 -->
+                    <div class="info_area">
+                        <div class="heading_area">
+                            <h1>해저드4 헤비 워터 다이버 블랙 타이 방수 와치 블루 야광 (블랙/화이트)</h1>
+                        </div>
+                        <div class="detail_info">
+                            <table border="1">
+                                <tbody>
+                                    <tr>
+                                        <th class="row"><span>상품요약정보</span></th>
+                                        <td>
+                                            <span>해저드4 헤비 워터 다이버 블랙 타이 방수 와치 그린 야광 (실버)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="row"><span
+                                                style="font-size: 14px;font-weight: 700;color: #212121;">판매가</span></th>
+                                        <td>
+                                            <span
+                                                style="font-size: 14px;font-weight: 700;color: #212121;">1,031,000원</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="row"><span>엠캐쉬</span></th>
+                                        <td>
+                                            <span>20,160원 (2%)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="row"><span>배송비</span></th>
+                                        <td>
+                                            <span>3,000원 (30,000원 이상 구매 시 무료)</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="guide_area">
+                                <p>(최소주문수량 1개 이상)</p>
+                            </div>
+                            
+                            <!-- 상품 총 금액 -->
+                            <div class="total_products">
+                                <table border="1">
+                                    <tbody>
+                                        <tr>
+                                            <td class="left">해저드4 헤비 워터 다이버 블랙 타이 방수 와치 블루 야광 (블랙/화이트)</td>
+                                            <td class="middle">
+                                                <span>
+                                                    <button type="button" class="down">-</button>
+                                                    <input type="text" class="inp" value="1">
+                                                    <button type="button" class="up">+</button>
+                                                </span>
+                                            </td>
+                                            <td class="right">
+                                                <span>1,031,000원</span><br>
+                                                <span><img src="img/ico_product_point.gif" alt="">(20,160원)</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 총금액 -->
+                            <div class="total_price">
+                                TOTAL
+                                <span class="total">
+                                    <strong>
+                                        <em>1,031,000원</em>
+                                    </strong>
+                                    (1개)
+                                </span>
+                            </div>
+                        </div>
+                        <!-- 구매버튼 -->
+                        <div class="product_action">
+                            <div class="action_btn">
+                                <button type="submit" class="btn_submit">구매하기</button>
+                                <button type="button" class="btn_cart">장바구니</button>
+                                <button type="button" class="btn_wish">관심상품</button>
+                            </div>
+                            <!-- 네이버 페이 -->
+                            <div class="naverchk_btn">
+                                <div class="npay_type">
+                                    <div class="npay_btn_box">
+                                        <div class="npay_btn">
+                                            <div class="npay_text">
+                                                <span>NAVER</span><br>
+                                                <span>네이버 ID로 간편구매<br>
+                                                    네이버페이</span>
+                                            </div>
+                                            <div class="npay_btn_list">
+                                                <button type="submit" class="npay_submit"><img src="img/네이버페이 구매.png"
+                                                        alt=""></button>
+                                                <button type="button" class="npay_btn_item">찜</button>
+                                                <button type="button" class="npay_btn_item"><img src="img/naver2.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                        <div class="npay_event">
+                                            <div class="npay_event_text">
+                                                <strong>현장결제</strong><span style="margin-left: 5px;">결제할 때 마다, 월 50번 포인트
+                                                    뽑기!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 카카오 페이 -->
+                            <div class="kakaopay_btn">
+                                <div class="kakao_type">
+                                    <div class="kakao_btn_box">
+                                        <div class="kakao_btn">
+                                            <div class="kakao_text">
+                                                <img src="img/카카오아웃.png" alt="">
+                                            </div>
+                                            <div class="kakao_btn_list">
+                                                <button type="submit" class="kakao_submit"><img src="img/카카오간편구매.png"
+                                                        alt=""></button>
+                                                <button type="button" class="kakao_btn_item_1"><img src="img/카카오채널.png"
+                                                        alt=""></button>
+                                                <button type="button" class="kakao_btn_item_2">찜</button>
+                                            </div>
+                                        </div>
+                                        <div class="kakao_event">
+                                            <div class="kakao_event_text">
+                                                <strong>[카카오페이]</strong><span style="margin-left: 5px;">누구나 1% 페이포인트
+                                                    적립!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 모바일 영역 -->
+            <div class="mobile_watch_warp">
+                <div class="mobile_detail_area">
+                    <div class="mobile_watch_img">
+                        <div class="mobile_main_img">
+                            <div class="mobile_img_box">
+                                <img src="img/시계앞면.jpg" alt="" width="100%">
+                            </div>
+                            <div class="mobile_img_box">
+                                <img src="img/시계뒷면.jpg" alt="" width="100%">
+                            </div>
+                            <div class="mobile_img_box">
+                                <img src="img/시계액정.jpg" alt="" width="100%">
+                            </div>
+                            <div class="mobile_img_box">
+                                <img src="img/시계줄.jpg" alt="" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile_btn">
+                        <button id="mobile_btn_1" style="margin-right: 10px;"></button>
+                        <button id="mobile_btn_2" style="margin-right: 10px;"></button>
+                        <button id="mobile_btn_3" style="margin-right: 10px;"></button>
+                        <button id="mobile_btn_4"></button>
+                    </div>
+                    <!-- 상품 정보 -->
+                    <div class="mobile_info_area">
+                        <div class="mobile_heading_area">
+                            <h1>해저드4 헤비 워터 다이버 블랙 타이 방수 와치 블루 야광 (블랙/화이트)</h1>
+                        </div>
+                        <div class="mobile_detail_info">
+                            <table border="1">
+                                <tbody>
+                                    <tr>
+                                        <th class="mobile_row"><span>상품요약정보</span></th>
+                                        <td>
+                                            <span>해저드4 헤비 워터 다이버 블랙 타이 방수 와치 그린 야광 (실버)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="mobile_row"><span
+                                                style="font-size: 14px;font-weight: 700;color: #212121;">판매가</span></th>
+                                        <td>
+                                            <span
+                                                style="font-size: 14px;font-weight: 700;color: #212121;">1,031,000원</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="mobile_row"><span>엠캐쉬</span></th>
+                                        <td>
+                                            <span>20,160원 (2%)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="mobile_row"><span>배송비</span></th>
+                                        <td>
+                                            <span>3,000원 (30,000원 이상 구매 시 무료)</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="mobile_guide_area">
+                                <p>(최소주문수량 1개 이상)</p>
+                            </div>
+                            <!-- 상품 총 금액 -->
+                            <div class="mobile_total_products">
+                                <table border="1">
+                                    <tbody>
+                                        <tr>
+                                            <td class="mobile_left">해저드4 헤비 워터 다이버 블랙 타이 방수 와치 블루 야광 (블랙/화이트)</td>
+                                            <td class="mobile_middle" id="mid">
+                                                <span>
+                                                    <button type="button" class="minus">-</button>
+                                                    <input type="text" class="mobile_inp" value="1">
+                                                    <button type="button" class="plus">+</button>
+                                                </span>
+                                            </td>
+                                            <td class="mobile_right">
+                                                <span>1,031,000원</span><br>
+                                                <span><img src="img/ico_product_point.gif" alt="">(20,160원)</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 총금액 -->
+                            <div class="mobile_total_price">
+                                TOTAL
+                                <span class="mobile_total">
+                                    <strong>
+                                        <em>1,031,000원</em>
+                                    </strong>
+                                    (1개)
+                                </span>
+                            </div>
+                        </div>
+                        <!-- 구매버튼 -->
+                        <div class="mobile_product_action">
+                            <div class="mobile_action_btn">
+                                <button type="submit" class="mobile_btn_submit">구매하기</button>
+                                <button type="button" class="mobile_btn_cart">장바구니</button>
+                                <button type="button" class="mobile_btn_wish">관심상품</button>
+                            </div>
+                            <!-- 네이버 페이 -->
+                            <div class="mobile_naverchk_btn">
+                                <div class="mobile_npay_type">
+                                    <div class="mobile_npay_btn_box">
+                                        <div class="mobile_npay_btn">
+                                            <div class="mobile_npay_text">
+                                                <span>NAVER</span><br>
+                                                <span>네이버 ID로 간편구매<br>
+                                                    네이버페이</span>
+                                            </div>
+                                            <div class="mobile_npay_btn_list">
+                                                <button type="submit" class="mobile_npay_submit"><img
+                                                        src="img/네이버페이 구매.png" alt=""></button>
+                                                <button type="button" class="mobile_npay_btn_item">찜</button>
+                                                <button type="button" class="mobile_npay_btn_item"><img
+                                                        src="img/naver2.png" alt=""></button>
+                                            </div>
+                                        </div>
+                                        <div class="mobile_npay_event">
+                                            <div class="mobile_npay_event_text">
+                                                <strong>현장결제</strong><span style="margin-left: 5px;">결제할 때 마다, 월 50번 포인트
+                                                    뽑기!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 카카오 페이 -->
+                            <div class="mobile_kakaopay_btn">
+                                <div class="mobile_kakao_type">
+                                    <div class="mobile_kakao_btn_box">
+                                        <div class="mobile_kakao_btn">
+                                            <div class="mobile_kakao_text">
+                                                <img src="img/카카오아웃.png" alt="">
+                                            </div>
+                                            <div class="mobile_kakao_btn_list">
+                                                <button type="submit" class="mobile_kakao_submit"><img
+                                                        src="img/카카오간편구매.png" alt=""></button>
+                                                <button type="button" class="mobile_kakao_btn_item_1"><img
+                                                        src="img/카카오채널.png" alt=""></button>
+                                                <button type="button" class="mobile_kakao_btn_item_2">찜</button>
+                                            </div>
+                                        </div>
+                                        <div class="mobile_kakao_event">
+                                            <div class="mobile_kakao_event_text">
+                                                <strong>[카카오페이]</strong><span style="margin-left: 5px;">누구나 1% 페이포인트
+                                                    적립!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 모바일 버전 -->
+
+        <!-- 시계 상세 -->
+        <div class="watch_product">
+            <div class="watch_tab">
+                <ul>
+                    <li id="detail" class="tab_text">상품정보</li>
+                    <li id="review" class="tab_text">상품리뷰</li>
+                    <li id="qna" class="tab_text">질문하기</li>
+                    <li id="return" class="tab_text">반품배송</li>
+                </ul>
+            </div>
+            <div class="mobile_watch_tab">
+                <ul>
+                    <li id="mobile_detail" class="mobile_tab_text">상품정보</li>
+                    <li id="mobile_review" class="mobile_tab_text">상품리뷰</li>
+                    <li id="mobile_qna" class="mobile_tab_text">질문하기</li>
+                    <li id="mobile_return" class="mobile_tab_text">반품배송</li>
+                </ul>
+            </div>
+            <div class="watch_detail">
+                <div class="detail_img">
+                    <img src="img/시계앞면.jpg" alt="" width="100%">
+                </div>
+                <div class="mobile_detail_img">
+                    <img src="img/시계앞면.jpg" alt="" width="100%">
+                </div>
+                <div class="watch_name">
+                    <img src="img/img1.png" alt="" width="100%">
+                    <span>해저드4<br></span>
+                    <span style="color: #62A3F1;">헤비 워터 다이버 블랙 타이 와치</span>
+                    <img src="img/img2.png" alt="" width="100%">
+                </div>
+                <div class="mobile_watch_name">
+                    <img src="img/img1.png" alt="" width="100%">
+                    <span>해저드4<br></span>
+                    <span style="color: #62A3F1;">헤비 워터 다이버 블랙 타이 와치</span>
+                    <img src="img/img2.png" alt="" width="100%">
+                </div>
+                <div class="watch_text_infor">
+                    <span>스위스 무브먼트를 이용하여 정확성이 높고, 300m 깊이까지 방수가 되는 다이버워치입니다. 자체 발광하는 트리튬 야광이 적<br>
+                        용되어 야간활동이나 어두운 곳에서 유용하게 사용할 수 있습니다. 3D 문자판이 적용되어 시인성이 좋고 가볍고 튼튼하며, 긁<br>
+                        힘 방지를 위해 크리스탈 소재 적용되었습니다. 손목 스트랩에 통기성이 좋도록 많은 버클홀을 적용하였고, 스크류 방식 핀 적<br>
+                        용으로 간편하게 밴드를 교체할 수 있습니다. 특수부대, 탐험가, 전문가들이 사용하면 좋은 제품입니다.
+                    </span><br><br><br>
+                    <span>#해저드4 #헤비워터다이버 #블랙타이와치 #방수시계 #다이빙시계 #다이버시계 #다이버워치 #300m방수 #스위스무브먼트<br>#긁힘방지 #트리튬야광</span>
+                </div>
+                <div class="specs_info">
+                    <div class="specs_info_title">
+                        <p>상품 상세정보</p>
+                    </div>
+                    <div class="specs_detail_info">
+                        <div class="watch_name_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">해저드4</p>
+                            <span>헤비 워터 다이버 블랙 타이 와치 블루 야광</span>
+                        </div>
+                        <div class="watch_color_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">색 상</p>
+                            <span>블랙/화이트</span>
+                        </div>
+                        <div class="watch_material_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">소 재</p>
+                            <span>티타늄(본체), TPR(밴드)</span>
+                        </div>
+                        <div class="watch_battery_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">무브먼트</p>
+                            <span>스위스 론다 515 쿼츠(배터리 작동식)</span>
+                        </div>
+                        <div class="watch_weight_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">무 게</p>
+                            <span>약 108g</span>
+                        </div>
+                        <div class="watch_waterproof_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">방 수</p>
+                            <span>최대 수심 300m/990ft</span>
+                        </div>
+                        <div class="watch_component_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">구성품</p>
+                            <span>시계 본체, TPR 밴드, 케이스</span>
+                        </div>
+                        <div class="watch_distinct_info">
+                            <p style="margin: 0px; font-weight: 600; color: #1a1a1a;">특 징</p>
+                            <span>- 수심 300m / 990FT 깊이까지 방수 가능<br>- 수많은 버클홀로 손목의 통기성 및 속건성 기능 제공<br>- 간편하게 교체가능한 스크류 방식
+                                핀 적용<br>- 수심 300m / 990FT 깊이까지 방수 가능<br>- 트리튬 야광으로 야간 활동에 유용함<br>- 크고 견고한 시계바늘로 고가시성
+                                디자인<br>- 스위스 무브먼트로 정확성 높음<br>- 약 2년에서 2년 5개월 정도의 배터리 수명</span>
+                        </div>
+                    </div>
+                    <div class="specs_info_title">
+                        <p style="padding-top: 120px;">상품이미지</p>
+                    </div>
+                    <div class="detail_img">
+                        <img src="img/시계뒷면.jpg" alt="" width="100%" style="padding-top: 20px;">
+                    </div>
+                    <div class="detail_img">
+                        <img src="img/시계액정.jpg" alt="" width="100%">
+                    </div>
+                    <div class="detail_img">
+                        <img src="img/시계줄.jpg" alt="" width="100%">
+                    </div>
+                    <div class="detail_img_2">
+                        <img src="img/watch_as.jpg" alt="" width="100%">
+                    </div>
+                    <div class="detail_img">
+                        <img src="img/watch_water.jpg" alt="" width="100%">
+                    </div>
+                    <div class="mobile_detail_img">
+                        <img src="img/시계뒷면.jpg" alt="" width="100%" style="padding-top: 20px;">
+                    </div>
+                    <div class="mobile_detail_img">
+                        <img src="img/시계액정.jpg" alt="" width="100%">
+                    </div>
+                    <div class="mobile_detail_img">
+                        <img src="img/시계줄.jpg" alt="" width="100%">
+                    </div>
+                    <div class="mobile_detail_img_2">
+                        <img src="img/watch_as.jpg" alt="" width="100%">
+                    </div>
+                    <div class="mobile_detail_img">
+                        <img src="img/watch_water.jpg" alt="" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 상품 영역 끝 -->
+
+    <!-- 푸터 영역 시작 -->
+    <footer>
+        <div class="footer_contain">
+            <div class="footer_warp">
+                <div class="foot_inner">
+                    <!-- 인포 왼쪽 시작 -->
+                    <div class="info_left">
+                        <div class="footer_logo">
+                            <img src="img/쇼핑몰로고.png" alt="">
+                        </div>
+                        <div class="shopping_info">
+                            <p class="info_title">쇼핑몰 기본정보</p>
+                            <div class="info_list">
+                                <div class="company_name">
+                                    <strong>상호명</strong><span>서바이벌기어</span>
+                                </div>
+                                <div class="president_name">
+                                    <strong>대표자명</strong><span>윤웅채</span>
+                                </div>
+                                <div class="address">
+                                    <strong>사업장 주소</strong><span>47514
+                                        부산광역시 연제구 명륜로 10</span>
+                                </div>
+                                <div class="phone">
+                                    <strong>대표번호</strong><span>1577-1111</span>
+                                </div>
+                                <div class="company_regno">
+                                    <strong>사업자 등록번호</strong><span>257-12-21479</span>
+                                </div>
+                                <div class="network_regno">
+                                    <strong>통신판매업 신고번호</strong><span>제2023-부산연제-0126호 [사업자 정보확인]</span>
+                                </div>
+                                <div class="cpo_name">
+                                    <strong>개인정보보호책임자</strong><span>윤웅채</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 인포 왼쪽 끝 -->
+
+                    <!-- 인포 오른쪽 시작 -->
+                    <div class="info_right">
+                        <div class="bt_list">
+                            <span>회사소개</span><span>이용약관</span><span>개인정보처리방침</span><span>이용안내</span>
+                        </div>
+                        <div class="wrap_cs">
+                            <div class="info_right_1">
+                                <div class="bt_title">고객정보</div>
+                                <div class="list">
+                                    <div class="bt_tel">
+                                        <strong>상담/주문전화</strong><span class="pdr10"></span><span>1577-1111</span>
+                                    </div>
+                                    <div class="email">
+                                        <strong>상담/주문 이메일</strong><br></span><span>ungchae85@naver.com</span>
+                                    </div>
+                                    <div class="bt_time">
+                                        <strong>CS운영시간</strong><br><span>10:00 ~ 18:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_right_2">
+                                <div class="bank_txt">
+                                    <div class="bt_title">결제 정보</div>
+                                    <div class="bt_title_sub">무통장 계좌정보</div>
+                                    <div class="list">
+                                        <span class="pdt5">우리은행 1002-840-976152 윤웅채</span>
+                                        <br><span class="pdt5">카카오뱅크 3333-14-4403800 윤웅채</span>
+                                        <br><span class="pdt5">부산은행 076-12-091421-9 윤웅채</span>
+                                        <br><span class="pdt5">농협 356-1584-4732-63 윤웅채</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_right_3">
+                                <div class="bt_title">SNS
+                                    <div class="sns_icon">
+                                        <img src="img/instagram.png" alt="">
+                                    </div>
+                                    <div class="sns_icon">
+                                        <img src="img/kakao.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 인포 오른쪽 끝 -->
+                </div>
+
+                <!-- 인포 하단 시작 -->
+                <div class="info_bot">
+                    <div class="copyright">Copyright © 서바이벌기어</div>
+                    <div class="dummy">
+                        <div class="escrow">
+                            <img src="img/정보보호법(아이콘).png" alt="">
+                            <span>고객님은 안전거래를 위해 결제 시 저희 쇼핑몰에서 가입한 구매 안전
+                                서비스를 이용하실 수 있습니다. [서비스가입정보확인]</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 인포 하단 끝 -->
+            </div>
+        </div>
+    </footer>
+    <!-- 푸터 영역 끝 -->
+
+    <div class="mobile_buy_btn">
+        <div class="byu_btn">
+            <button type="submit" class="mobile_byt_submit">구매하기</button>
+            <button type="button" class="mobile_byt_cart">장바구니</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+
+        $('.middle :button').on({
+            'click': function (e) {
+                e.preventDefault();
+                var $count = $(this).parent('.middle').find('.inp');
+                var now = parseInt($count.val());
+                var min = 1;
+                var max = 999;
+                var num = now;
+                if ($(this).hasClass('down')) {
+                    var type = 'd';
+                } else {
+                    var type = 'u';
+                }
+                if (type == 'd') {
+                    if (now > min) {
+                        num = now - 1;
+                    }
+                } else {
+                    if (now < max) {
+                        num = now + 1;
+                    }
+                }
+                if (num != now) {
+                    $count.val(num);
+                }
+            }
+        });
+
+        $('#mid :button').on({
+            'click': function (e) {
+                e.preventDefault();
+                var $count = $(this).parent('#mid').find('.mobile_inp');
+                var now = parseInt($count.val());
+                var min = 1;
+                var max = 999;
+                var num = now;
+                if ($(this).hasClass('minus')) {
+                    var type = 'm';
+                } else {
+                    var type = 'p';
+                }
+                if (type == 'm') {
+                    if (now > min) {
+                        num = now - 1;
+                    }
+                } else {
+                    if (now < max) {
+                        num = now + 1;
+                    }
+                }
+                if (num != now) {
+                    $count.val(num);
+                }
+            }
+        });
+
+        $('#watch_img_1').on('click', function () {
+            $('.main_img').css('transform', 'translateX(0%)')
+        })
+        $('#watch_img_2').on('click', function () {
+            $('.main_img').css('transform', 'translateX(-580px)')
+        })
+        $('#watch_img_3').on('click', function () {
+            $('.main_img').css('transform', 'translateX(-1160px)')
+        })
+        $('#watch_img_4').on('click', function () {
+            $('.main_img').css('transform', 'translateX(-1740px)')
+        })
+
+        $('#mobile_btn_1').css('background-color', '#51806C')
+        $('#mobile_btn_1').on('click', function () {
+            $('.mobile_main_img').css('transform', 'translateX(0%)')
+            $('#mobile_btn_1').css('background-color', '#51806C')
+            $('#mobile_btn_2').css('background-color', '#e5e0e7')
+            $('#mobile_btn_3').css('background-color', '#e5e0e7')
+            $('#mobile_btn_4').css('background-color', '#e5e0e7')
+        })
+        $('#mobile_btn_2').on('click', function () {
+            $('.mobile_main_img').css('transform', 'translateX(-25%)')
+            $('#mobile_btn_1').css('background-color', '#e5e0e7')
+            $('#mobile_btn_2').css('background-color', '#51806C')
+            $('#mobile_btn_3').css('background-color', '#e5e0e7')
+            $('#mobile_btn_4').css('background-color', '#e5e0e7')
+        })
+        $('#mobile_btn_3').on('click', function () {
+            $('.mobile_main_img').css('transform', 'translateX(-50%)')
+            $('#mobile_btn_1').css('background-color', '#e5e0e7')
+            $('#mobile_btn_2').css('background-color', '#e5e0e7')
+            $('#mobile_btn_3').css('background-color', '#51806C')
+            $('#mobile_btn_4').css('background-color', '#e5e0e7')
+        })
+        $('#mobile_btn_4').on('click', function () {
+            $('.mobile_main_img').css('transform', 'translateX(-75%)')
+            $('#mobile_btn_1').css('background-color', '#e5e0e7')
+            $('#mobile_btn_2').css('background-color', '#e5e0e7')
+            $('#mobile_btn_3').css('background-color', '#e5e0e7')
+            $('#mobile_btn_4').css('background-color', '#51806C')
+        })
+
+        $('#detail').on('click', function () {
+            $('#detail').css('color', '#51806c')
+            $('#review').css('color', '#7C7C7C')
+            $('#qna').css('color', '#7C7C7C')
+            $('#return').css('color', '#7C7C7C')
+        })
+        $('#review').on('click', function () {
+            $('#detail').css('color', '#7C7C7C')
+            $('#review').css('color', '#51806c')
+            $('#qna').css('color', '#7C7C7C')
+            $('#return').css('color', '#7C7C7C')
+        })
+        $('#qna').on('click', function () {
+            $('#detail').css('color', '#7C7C7C')
+            $('#review').css('color', '#7C7C7C')
+            $('#qna').css('color', '#51806c')
+            $('#return').css('color', '#7C7C7C')
+        })
+        $('#return').on('click', function () {
+            $('#detail').css('color', '#7C7C7C')
+            $('#review').css('color', '#7C7C7C')
+            $('#qna').css('color', '#7C7C7C')
+            $('#return').css('color', '#51806c')
+        })
+
+        $('#mobile_detail').on('click', function () {
+            $('#mobile_detail').css('color', '#51806c')
+            $('#mobile_review').css('color', '#7C7C7C')
+            $('#mobile_qna').css('color', '#7C7C7C')
+            $('#mobile_return').css('color', '#7C7C7C')
+        })
+        $('#mobile_review').on('click', function () {
+            $('#mobile_detail').css('color', '#7C7C7C')
+            $('#mobile_review').css('color', '#51806c')
+            $('#mobile_qna').css('color', '#7C7C7C')
+            $('#mobile_return').css('color', '#7C7C7C')
+        })
+        $('#mobile_qna').on('click', function () {
+            $('#mobile_detail').css('color', '#7C7C7C')
+            $('#mobile_review').css('color', '#7C7C7C')
+            $('#mobile_qna').css('color', '#51806c')
+            $('#mobile_return').css('color', '#7C7C7C')
+        })
+        $('#mobile_return').on('click', function () {
+            $('#mobile_detail').css('color', '#7C7C7C')
+            $('#mobile_review').css('color', '#7C7C7C')
+            $('#mobile_qna').css('color', '#7C7C7C')
+            $('#mobile_return').css('color', '#51806c')
+        })
+
+    </script>
+</body>
+
+</html>
