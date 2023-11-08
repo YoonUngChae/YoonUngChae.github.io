@@ -155,8 +155,8 @@
             <!-- 피시 영역  -->
             <div class="watch_warp">
                 <div class="detail_area">
-                    <div class="watch_img">
-                        <div class="main_img">
+                    <div class="img_con">
+                        <div class="watch_img">
                             <div class="img_box">
                                 <img src="img/시계앞면.jpg" alt="" width="100%">
                             </div>
@@ -179,10 +179,6 @@
                                     <li id="watch_img_4" class="img_list"><img src="img/시계줄.jpg" alt=""></li>
                                 </ul>
                             </div>
-                            <div style="clear: both;"></div>
-                            <button type="button" class="prev"><i aria-hidden="true" class="icoArrow_left"></i></button>
-                            <button type="button" class="next"><i aria-hidden="true"
-                                    class="icoArrow_right"></i></button>
                         </div>
                     </div>
                     <!-- 상품 정보 -->
@@ -225,7 +221,7 @@
                             <div class="guide_area">
                                 <p>(최소주문수량 1개 이상)</p>
                             </div>
-                            
+
                             <!-- 상품 총 금액 -->
                             <div class="total_products">
                                 <table border="1">
@@ -780,16 +776,16 @@
         });
 
         $('#watch_img_1').on('click', function () {
-            $('.main_img').css('transform', 'translateX(0%)')
+            $('.watch_img').css('transform', 'translateX(0%)')
         })
         $('#watch_img_2').on('click', function () {
-            $('.main_img').css('transform', 'translateX(-580px)')
+            $('.watch_img').css('transform', 'translateX(-580px)')
         })
         $('#watch_img_3').on('click', function () {
-            $('.main_img').css('transform', 'translateX(-1160px)')
+            $('.watch_img').css('transform', 'translateX(-1160px)')
         })
         $('#watch_img_4').on('click', function () {
-            $('.main_img').css('transform', 'translateX(-1740px)')
+            $('.watch_img').css('transform', 'translateX(-1740px)')
         })
 
         $('#mobile_btn_1').css('background-color', '#51806C')
